@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Aldrigo Raffaele</Authors>
+    <Company>Aldrigos</Company>
+    <Product>UltraUpdater</Product>
+    <Copyright>Aldrigo Raffaele</Copyright>
+    <Version>2.0.0</Version>
+    <Description>Library for adding automatic updates to your software</Description>
+    <LangVersion>7.3</LangVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://licenses.nuget.org/LGPL-3.0-only</PackageLicenseUrl>
+    <PackageTags>Update Updater</PackageTags>
+    <PackageId>Aldrigos.UltraUpdater</PackageId>
+    <AssemblyName>Aldrigos.UltraUpdater</AssemblyName>
+    <RootNamespace>Aldrigos.UltraUpdater</RootNamespace>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+</Project>

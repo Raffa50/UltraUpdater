@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<form width="447" height="319" shell="" />
+	<!-- <media type="video"> for video -->
+	<!-- <media type="music">music.mp3</media> -->
+	<!-- <nomedia> if no music or video -->
+	<nomedia></nomedia>
+	<sitesplash>google.com</sitesplash> <!-- leve empity if you have a video! -->
+	<downloadsite>http://127.0.0.1/updater/</downloadsite>
+</settings>

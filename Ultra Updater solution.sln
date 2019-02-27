@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldrigos.UltraUpdater.Updater", "Ultra Updater\Aldrigos.UltraUpdater.Updater.csproj", "{1BA6AB33-0FE1-4352-92D1-CD891EAF5599}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aldrigos.UltraUpdater.Manager", "Update Manager\Aldrigos.UltraUpdater.Manager.csproj", "{03E34194-E631-4ADF-B09C-C92B64492502}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aldrigos.UltraUpdater", "Aldrigo.UltraUpdater\Aldrigos.UltraUpdater.csproj", "{F87703C5-9D32-4383-B80B-D313C88F8301}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BA6AB33-0FE1-4352-92D1-CD891EAF5599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA6AB33-0FE1-4352-92D1-CD891EAF5599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA6AB33-0FE1-4352-92D1-CD891EAF5599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA6AB33-0FE1-4352-92D1-CD891EAF5599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E34194-E631-4ADF-B09C-C92B64492502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E34194-E631-4ADF-B09C-C92B64492502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E34194-E631-4ADF-B09C-C92B64492502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E34194-E631-4ADF-B09C-C92B64492502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F87703C5-9D32-4383-B80B-D313C88F8301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87703C5-9D32-4383-B80B-D313C88F8301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87703C5-9D32-4383-B80B-D313C88F8301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87703C5-9D32-4383-B80B-D313C88F8301}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29148000-C8F0-4173-AA67-F2C36D77B993}
+	EndGlobalSection
+EndGlobal
