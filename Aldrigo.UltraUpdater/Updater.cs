@@ -73,13 +73,17 @@ namespace Aldrigos.UltraUpdater {
             await Task.WhenAll(tasks);
         }
 
-        public void ReplaceWithUpdate(string bootApp = null)
+        public virtual void ReplaceWithUpdate(string bootApp = null)
         {
+            string arg = $"xcopy /s \"{UpdaterCacheDir}\" \"{ApplicationDirectory}\" & RMDIR \"{UpdaterCacheDir}\" /S /Q";
+            if (!string.IsNullOrWhiteSpace(bootApp))
+                arg += $" & \"{bootApp}\"";
+
             var startInfo = new ProcessStartInfo
             {
                 WindowStyle = ProcessWindowStyle.Hidden,
                 FileName = "cmd.exe",
-                Arguments = $"xcopy /s \"{UpdaterCacheDir}\" \"{ApplicationDirectory}\" & RMDIR \"{UpdaterCacheDir}\" /S /Q",
+                Arguments = arg,
                 Verb = "runas"
             };
             var process = new Process
@@ -89,7 +93,7 @@ namespace Aldrigos.UltraUpdater {
             process.Start();
         }
 
-        public async Task<IEnumerable<DirectoryUpdate>> IntegrityCheckAsync(CancellationToken cancellation = default)
+        public virtual async Task<IEnumerable<DirectoryUpdate>> IntegrityCheckAsync(CancellationToken cancellation = default)
         {
             throw new NotImplementedException();
         }
@@ -107,13 +111,13 @@ namespace Aldrigos.UltraUpdater {
             //}
         }
 
-        public async Task IntegrityCheckWithFixAsync(IProgress<float> progress = null, CancellationToken cancellation = default)
+        public virtual async Task IntegrityCheckWithFixAsync(IProgress<float> progress = null, CancellationToken cancellation = default)
         {
             var corruptedFiles = await IntegrityCheckAsync(cancellation);
             throw new NotImplementedException();
         }
 
-        public Task ReDownload(IEnumerable<DirectoryUpdate> files, CancellationToken cancellation)
+        public virtual Task ReDownload(IEnumerable<DirectoryUpdate> files, CancellationToken cancellation)
         {
             throw new NotImplementedException();
         }

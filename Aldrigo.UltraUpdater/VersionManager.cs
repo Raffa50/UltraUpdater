@@ -8,7 +8,7 @@ namespace Aldrigos.UltraUpdater {
         private static void CreateVersion( string appDir, int version, string versionfilename ) {
             var myapplication = new ApplicationUpdate( new DirectoryInfo( appDir ), version );
 
-            using( var writer = new StreamWriter( appDir + Path.DirectorySeparatorChar + versionfilename + ".json" ) ) {
+            using( var writer = new StreamWriter( Path.Combine(appDir, versionfilename + ".json") ) ) {
                 writer.Write( JsonConvert.SerializeObject(myapplication) );
             }
         }
@@ -20,10 +20,11 @@ namespace Aldrigos.UltraUpdater {
         }
 
         public static void CreateUpdate( string appDir ) {
-            if( !File.Exists(appDir + Path.DirectorySeparatorChar + "version.json") )
+            string versionPath = Path.Combine(appDir, "version.json");
+            if( !File.Exists(versionPath) )
                 throw new InvalidOperationException("Previous version doesn't exist");
 
-            var versionJson = File.ReadAllText(appDir + Path.DirectorySeparatorChar + "version.json");
+            var versionJson = File.ReadAllText(versionPath);
             int currentversion = JsonConvert.DeserializeObject<ApplicationUpdate>(versionJson).Version;
 
             CreateVersion(appDir, currentversion +1, "newversion");
