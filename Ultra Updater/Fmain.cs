@@ -14,7 +14,8 @@ namespace Aldrigos.UltraUpdater.Updater
     {
         IUpdater myupdater;
         private IApplicationVersion _latestVersion;
-        private string downloadsite, shellapp;
+        private Uri downloadsite;
+        private string shellapp;
         public bool UpdateUpdater = true;
 
         public string YourFilesPath => Application.StartupPath + Path.DirectorySeparatorChar + "app";
